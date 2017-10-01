@@ -1,11 +1,13 @@
 export default {
   name: 'Invoice',
+  
   data () {
     return {
       current: {},
       rows: []
     }
   },
+
   methods: {
     pushData (current) {
       const obj = { ...current }
@@ -16,6 +18,7 @@ export default {
       this.rows.splice(index, 1)
     }
   },
+
   computed: {
     total () {
       let total = 0
@@ -26,4 +29,5 @@ export default {
       return total
     }
   }
+
 }
