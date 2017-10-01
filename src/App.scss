@@ -1,0 +1,109 @@
+$green: #4CAF50;
+$red: #F44336;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:100,300,400,500');
+
+body {
+  padding: 5em;
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 200;
+
+  .container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .row {
+      width: 800px;
+      border: 1px solid #BFFFD4;
+
+      .flex-item {
+        padding: 5px;
+        margin: 10px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  &.table {
+    width: 100%;
+
+    tr {
+      border-bottom: 1px solid #DDD;
+
+      &.edit-tr {
+        input {
+          border: none;
+        }
+      }
+
+      &.header-tr {
+        background: $green;
+        color: #fff;
+      }
+
+      &.footer-tr {
+        background: #eee;
+      }
+
+      &.edit-tr:hover {
+        background: #eee;
+        transition: 0.4s;
+
+        input {
+          background: #eee;
+          transition: 0.7s;
+        }
+
+        input:focus {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+th, td {
+  text-align: left;
+  padding: 0.25em;
+  font-weight: 400;
+
+  &.edit-buttons {
+    text-align: right;
+  }
+
+  &.no {
+    color: #999;
+  }
+}
+
+button {
+  border-radius: 3px;
+  border: none;
+  margin: 0 0.25em;
+  transition: all 0.3s;
+  color: #fff;
+
+  &.edit { background: $green; }
+  &.delete { background: $red; }
+  &:hover {
+    box-shadow: 0 0 4px rgba(3,3,3,0.8);
+    opacity: 0.9;
+  }
+}
+
+input {
+  width: 100%;
+}
